@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <style>
+        *{
+            margin: 0;
+            padding : 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            display: flex;
+            background-color: white;
+        }
+
+        .sidebar{
+            width: 250px;
+            background: #ffffff;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0,0.1);
+        }
+        .sidebar h2{
+            color: rgb(98, 11, 237);
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul{
+            list-style: none;
+        }
+
+        .sidebar ul li{
+            padding: 10px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .sidebar ul li:hover{
+            background: #eaeaea;
+            border-radius: 5px;
+        }
+
+        .content{
+            flex: 1;
+            padding: 20px;
+        }
+
+        .topbar{
+            display: flex;
+            justify-content:  space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .search{
+            padding: 8px;
+            width: 50%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card{
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0,0.1);
+        }
+        .one{background: #2b08da; color: white;}
+        .two{background: #4a90e2; color: white;}
+        .three{background: #8e44ad; color: white;}
+        .four{background: #2ecc71; color:white;}
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Finance</h2>
+            <ul>
+                <li>Dashboard
+                    <ul class="dropdown">
+                        <li>Classic</li>
+                        <li>Minimal</li>
+                    </ul>
+                </li>
+                <li>Pages</li>
+                <li>Applications</li>
+                <li>UI Component</li>
+                <li>Widgets</li>
+                <li>Forms</li>
+                <li>Charts</li>
+            </ul>
+    </div>
+
+    <div class="content">
+        <div class="topbar">
+            <input type="text" class="search" placeholder="Search here....">
+        </div>
+
+        <div class="container">
+            <div class="card one">
+                <h3>Total Income</h3>
+                <h2>$ 579,000</h2>
+                <p>saved 25%</p>
+            </div>
+            <div class="card two">
+                <h3>Total Expenses</h3>
+                <h2>$ 79,000</h2>
+                <p>Saved 25%</p>
+            </div>
+            <div class="card three">
+                <h3>Cash on Hand</h3>
+                <h2>$ 92,000</h2>
+                <p>Saved 25%</p>
+            </div>
+            <div class="card four">
+                <h3>Net Profit Margin</h3>
+                <h2>$ 179,000</h2>
+                <p>Saved 65%</p>
+            </div>
+            <div class="card five">
+                <img src="IMG-20250124-WA0045.jpg" alt="graph"> 
+            </div>
+            <div class="card six">
+                <img src="IMG-20250124-WA0046.jpg" alt="analytics">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

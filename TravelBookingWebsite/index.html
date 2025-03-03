@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .navigation-bar {
+            background: #e64bf4;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navigation-bar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navigation-bar ul li {
+            display: inline;
+        }
+
+        .navigation-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        .navigation-bar ul li a:hover {
+            background: white;
+            color: #e64bf4;
+        }
+
+        @media (max-width: 768px) {
+            .navigation-bar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation-bar ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+            background: #e64bf4;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        .top-destinations h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .destination {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .destination img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .travel-packages {
+            margin-top: 30px;
+        }
+
+        .travel-packages h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background:#e64bf4;
+            color: white;
+        }
+
+        .booking-form {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group .radio-group, .form-group .checkbox-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background: #e64bf4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background: #e64bf4;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .destinations {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+    <div class="navigation-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+    </header>
+    <main class="container">
+        <section class="intro">
+            <h2>Welcome To Dream Travels</h2>
+            <p>Dream Travels is your ultimate travel companion, making your dream vacations a reality. 
+            Whether you're looking for serene beaches, adventurous mountain treks, or cultural city escapes, 
+            we provide the best travel destinations, exclusive packages, and seamless booking options.
+            Explore the world with ease and let us handle the details while you enjoy unforgettable experiences.</p>
+        </section>
+
+        <section class="top-destinations">
+            <h2>Top Destinations</h2>
+            <div class="destinations">
+                <div class="destination">
+                    <img src="paris.jpg" alt="Paris">
+                    <h3>Paris, France</h3>
+                    <p>The city of love, known for its art, fashion, and iconic Eiffel Tower.</p>
+                </div>
+                <div class="destination">
+                    <img src="maldives.jpg" alt="Maldives">
+                    <h3>Maldives</h3>
+                    <p>White sandy beaches, clear waters, and the perfect tropical escape.</p>
+                </div>
+                <div class="destination">
+                    <img src="bali.jpg" alt="Bali">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Rich culture, scenic landscapes, and an ideal destination for relaxation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-packages">
+            <h2>Our Travel Packages</h2>
+            <table>
+                <tr>
+                    <td>Package Name</td>
+                    <td>Destination</td>
+                    <td>Price</td>
+                    <td>Duration</td>
+                </tr>
+                <tr>
+                    <td>Goo Paris</td>
+                    <td>Paris</td>
+                    <td>$1800</td>
+                    <td>7 Days</td>
+                </tr>
+                <tr>
+                    <td>Goo Maldives</td>
+                    <td>Maldives</td>
+                    <td>$2000</td>
+                    <td>5 Days</td>
+                </tr>
+                <tr>
+                    <td>Goo Bali</td>
+                    <td>Bali</td>
+                    <td>$1500</td>
+                    <td>5 Days</td>
+                </tr>
+            </table>
+        </section>
+        <section class="booking-form">
+            <h2>Book Your Trip</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Select Destination:</label>
+                    <select id="destination">
+                        <option value="paris">Paris</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="bali">Bali</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Travel Class:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="class" value="economy" required> Economy</label>
+                        <label><input type="radio" name="class" value="business"> Business</label>
+                        <label><input type="radio" name="class" value="first"> First Class</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Add-ons:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="insurance"> Insurance</label>
+                        <label><input type="checkbox" value="meal"> Meal Plan</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

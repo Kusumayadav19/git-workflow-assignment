@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+</head>
+<body>
+    <header>
+        <h1>Travel Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div>
+        <section>
+            <h2>Welcome to Our Travel Booking Website</h2>
+            <p>Plan your dream vacation with us. Choose from our top destinations and exclusive travel packages.</p>
+        </section>
+        
+        <section>
+            <h2>Top Destinations</h2>
+            <ul>
+                <li>
+                    <img src="paris.jpg" alt="Destination 1">
+                    <p>Paris - The City of Lights</p>
+                </li>
+                <li>
+                    <img src="maldives.jpg" alt="Destination 2">
+                    <p>Maldives - A Tropical Paradise</p>
+                </li>
+                <li>
+                    <img src="bali.jpg" alt="Destination 3">
+                    <p>Bali - A Blend of Tradition and Modernity</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Travel Packages</h2>
+            <table>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Destination</th>
+                    <th>Price</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Romantic Getaway</td>
+                    <td>Paris</td>
+                    <td>$1500</td>
+                    <td>5 Days</td>
+                </tr>
+                <tr>
+                    <td>Beach Retreat</td>
+                    <td>Maldives</td>
+                    <td>$2000</td>
+                    <td>7 Days</td>
+                </tr>
+                <tr>
+                    <td>City Explorer</td>
+                    <td>Tokyo</td>
+                    <td>$1800</td>
+                    <td>6 Days</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Book Your Trip</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination">
+                    <option value="paris">Paris</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="Bali">BAli</option>
+                </select><br>
+                
+                <label>Travel Class:</label>
+                <input type="radio" name="class" value="economy"> Economy
+                <input type="radio" name="class" value="business"> Business
+                <input type="radio" name="class" value="first"> First Class<br>
+                
+                <label>Add-ons:</label>
+                <input type="checkbox" name="addons" value="insurance"> Insurance
+                <input type="checkbox" name="addons" value="meal"> Meal Plan<br>
+                
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Contact us at: travel@booking.com</p>
+        <p>Follow us on:
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
