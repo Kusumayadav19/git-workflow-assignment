@@ -6,15 +6,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px; 
 }
 
 .card-container {
     display: flex;
+    flex-direction: row;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 700px;
+    width: 100%;
 }
 
 .result {
@@ -24,6 +27,9 @@ body {
     padding: 30px;
     width: 50%;
     border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .score {
@@ -43,6 +49,7 @@ body {
     width: 50%;
 }
 
+/* List Items */
 ul {
     list-style: none;
     padding: 0;
@@ -68,6 +75,7 @@ li span {
     font-weight: bold;
 }
 
+/* Button */
 .continue-btn {
     width: 100%;
     background: #4e00ff;
@@ -90,4 +98,80 @@ li span {
 .continue-btn:active {
     background: #3b0080;
     transform: scale(0.98);
+}
+
+.reaction {
+    color: red;
+}
+
+.memory {
+    color: rgb(231, 142, 40);
+}
+
+.verbal {
+    color: lightgreen;
+}
+
+.visual {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .result {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        padding: 20px;
+    }
+
+    .summary {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .score {
+        width: 140px;
+        height: 140px;
+    }
+
+    .continue-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card-container {
+        max-width: 100%;
+    }
+
+    .result {
+        padding: 15px;
+    }
+
+    .summary {
+        padding: 15px;
+    }
+
+    .score {
+        width: 120px;
+        height: 120px;
+    }
+
+    li {
+        padding: 8px;
+    }
+
+    .continue-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
